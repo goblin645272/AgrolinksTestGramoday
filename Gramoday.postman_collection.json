@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "51105e92-b46c-430e-82a6-0d320da9126b",
+		"name": "Gramoday",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5001/reports",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"reportDetails\": {\r\n\"userId\": \"user-1\",\r\n\"marketID\": \"market-1\",\r\n\"marketName\": \"Vashi Navi Mumbai\",\r\n\"cmdtyID\": \"cmdty-1\",\r\n\"marketType\": \"Mandi\",\r\n\"cmdtyName\": \"Potato\",\r\n\"priceUnit\": \"Pack\",\r\n\"convFctr\": 50,\r\n\"price\": 700\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/reports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"reports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5001/api/reports?reportID=610437ffa913cc2c38192942",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/reports?reportID=610437ffa913cc2c38192942",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"reports"
+					],
+					"query": [
+						{
+							"key": "reportID",
+							"value": "610437ffa913cc2c38192942"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
